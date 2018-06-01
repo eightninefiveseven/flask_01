@@ -1,0 +1,15 @@
+<form method="post">
+    {{ form.csrf_token }}
+    <h1>图书</h1>
+    <p>author: {{ form.ator }}</p>
+    <p>book: {{ form.book }}</p>
+    <p>{{ form.submit }}</p>
+</form>
+{% for foo in ator %}
+{{ foo.name }}<a href="/detele_author{{ foo.id }}">删除{{ foo.id }}</a><br>
+{% endfor %}
+<hr>
+{% for index in book %}
+{{ index.name }}<a href="/detele_book{{ index.id }}">删除{{ index.id }}</a><br>
+{% endfor %}
+
